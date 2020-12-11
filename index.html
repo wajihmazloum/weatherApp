@@ -1,0 +1,90 @@
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body style="margin: 2%;">
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                The Weather Channel
+            </a>
+        </div>
+    </nav>
+    <br><br>
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" href="#pills-home" role="tab"
+                aria-controls="pills-home" aria-selected="true">Auto Location</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" href="#pills-profile" role="tab"
+                aria-controls="pills-profile" aria-selected="false">By name</a>
+        </li>
+        <!-- <li class="nav-item" role="presentation">
+            <a class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" href="#pills-contact" role="tab"
+                aria-controls="pills-contact" aria-selected="false">Contact us</a>
+        </li> -->
+    </ul>
+    <br><br>
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            <center>
+                <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="btn-group-vertical">
+                            <button class="btn btn-outline-primary" id="find-me">Weather of your Current
+                                location</button><br />
+                            <p id="status"></p>
+                            <a class="btn btn-outline-primary" id="map-link" target="_blank">Map Location</a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-md-6" style="margin-top: 3%;">
+                        <h5 id="location"></h5>
+                        <img id="ccc" src="" alt="">
+                    </div>
+                </div>
+            </center>
+
+
+
+        </div>
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+            <div class="input-group mb-3">
+
+                <button class="btn btn-outline-primary" type="button" id="check">get weather</button>
+                <input type="text" class="form-control" placeholder="enter the city name"
+                    aria-label="Example text with button addon" aria-describedby="check" id="country">
+            </div>
+            <center>
+                <h5 id="name"></h5>
+                <img id="ggg" src="" alt="">
+            </center>
+        </div>
+
+        <!-- <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div> -->
+    </div>
+
+
+
+</body>
+<footer>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+</footer>
+
+</html>
+
+

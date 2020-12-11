@@ -1,0 +1,15 @@
+input{
+    margin-left: 10%;
+}
+body{
+    margin: 10px;
+}
+.navbar-brand{
+    font-family: 'Cinzel', serif;
+}
+.navbar{
+    padding-bottom: 200px;
+}
+h5{
+    font-family: 'Cinzel', serif;
+}
