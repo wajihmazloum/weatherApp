@@ -9,12 +9,12 @@ document.getElementById("map-link").addEventListener('click', function () {
 document.getElementById("check").addEventListener('click', function () {
   var data = document.getElementById("country").value;
   if (data !== "") {
-    var fetchURL = `http://api.openweathermap.org/data/2.5/weather?q=${data}&units=metric&appid=1805b28a26785843f83816dbb1f2164b`;
+    var fetchURL = `https://api.openweathermap.org/data/2.5/weather?q=${data}&units=metric&appid=1805b28a26785843f83816dbb1f2164b`;
   fetch(fetchURL)
     .then(response => response.json())
     .then(json => {
       document.getElementById("name").innerHTML = data + " temperature is : " + json.main.temp + "°C" ;
-      document.getElementById("ggg").src = `http://openweathermap.org/img/wn/${json.weather[0].icon}@2x.png`;
+      document.getElementById("ggg").src = `https://openweathermap.org/img/wn/${json.weather[0].icon}@2x.png`;
     })
     .catch((error) => {
       alert("error: make sure that you have not entered the country name wrongly ");
@@ -44,14 +44,14 @@ function geoFindMe() {
     mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
     //   mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
     mapLink.textContent = "Map Location";
-    var link = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=1805b28a26785843f83816dbb1f2164b`;
+    var link = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=1805b28a26785843f83816dbb1f2164b`;
     fetch(link)
       .then(response => response.json())
 
       .then(json => {
         // document.getElementById("map-button").disabled = false;
         document.getElementById("location").innerHTML = "the temperature of your current location is: " + json.main.temp + " °C";
-        document.getElementById("ccc").src = `http://openweathermap.org/img/wn/${json.weather[0].icon}@2x.png`;
+        document.getElementById("ccc").src = `https://openweathermap.org/img/wn/${json.weather[0].icon}@2x.png`;
       });
   }
 
